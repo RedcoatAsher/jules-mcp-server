@@ -59,6 +59,10 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
+          tags: |
+            type=ref,event=tag
+            type=sha
+            type=sha,format=long
           images: ghcr.io/${{ github.repository }}
 
       - name: Build and push Docker image
@@ -98,7 +102,11 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: xsavikx/${{ github.repository }}
+          tags: |
+            type=ref,event=tag
+            type=sha
+            type=sha,format=long
+          images: xsavikx/jules-mcp-server
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
@@ -111,6 +119,6 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v3
         with:
-          subject-name: index.docker.io/xsavikx/${{ github.repository }}
+          subject-name: index.docker.io/xsavikx/jules-mcp-server
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
