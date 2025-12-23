@@ -7,7 +7,7 @@ sessions, and inspect activities using the official jules-agent-sdk.
 
 - Server framework: FastMCP
 - SDK: jules-agent-sdk
-- Python: 3.13+
+- Python: 3.14+
 - License: Apache-2.0
 
 ## Features
@@ -48,7 +48,7 @@ Option B — using uv (recommended during development):
 uv sync
 ```
 
-The project targets Python 3.13+.
+The project targets Python 3.14+.
 
 ## Configuration
 

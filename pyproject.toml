@@ -2,7 +2,7 @@
 name = "jules-mcp"
 version = "0.1.6"
 description = "Google Jules MCP server"
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 dependencies = [
     "fastmcp>=2.12.4",
     "jules-agent-sdk>=0.1.1",
@@ -33,7 +33,7 @@ dev = [
 ]
 
 [tool.mypy]
-python_version = "3.13"
+python_version = "3.14"
 exclude = "tests"
 namespace_packages = true
 explicit_package_bases = true
